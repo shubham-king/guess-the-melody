@@ -14,7 +14,8 @@ bot: Bot = QuizBot()
 @bot.message_handler(commands=["start", "help"])
 def start(message: Message) -> None:
     user_msg: UserMessage = BotUserMessage(message)
-    bot.send_message(user_msg.chat_id(), "Hello this is a melody quiz game. Please choose /game option to start a game")
+    bot.send_message(user_msg.chat_id(), "Hello this is a melody quiz game. Please choose /game option to start a game. Made by @ShubhamToxic")
+                     
 
 
 @bot.message_handler(commands=["game"])
